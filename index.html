@@ -1,99 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewpoor" content="width=device-width, initial-scale=1.0">
-    <title>Anriyan konversi suhu</title>
-    <!-- Ini link CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Suhu</title>
+    <link rel="stylesheet" href="css/style.css">
 
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Merriweather+Sans&display=swap" rel="stylesheet">
+</head>
 <body>
     <header>
-        <h1>Konversi Satuan Suhu</h1>
+        <div class="header-grid">
+            <div>
+                <!-- <img src="img/jonas-jaeken-6FCNkB_zM-o-unsplash.jpg" alt="image-header"> -->
+                <img src="https://images.unsplash.com/photo-1622069873046-39550b57c903?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dGVtcGVyYXR1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=700&q=60" alt="image-header">
+                <div class="background-img"></div>
+            </div>
+            <div class="wrapper">
+                <h1>Konversi Suhu</h1>
+            </div>
+        </div>
     </header>
-
-    <!-- Main Content -->
     <main>
-        <h4>Masukkan suhu derajat celcius (&deg;C)</h4>
-
-        <!-- Section Celcius -->
-        <section class="celcius-container" id="konversi">
-            <header>
-                <h3 data-temp-input="celcius">Celcius (&deg;C)</h3>
-                
-            </header>
-
-            <section>
-                <textarea class="textarea" input type="text" name="tempInput" id="tempInput" placeholder="masukkan temperatur"></textarea>
-
-                <section>
-                    <button class="button darkgreen-color" onclick="onConvert()">Konversi</button>
-                    <button class="button darkred-color" onclick="onReset()">Reset</button>
-                    <button class="button darkgray-color" onclick="onReverse()">Reverse</button>
-                </section>
+        <div class="main-container wrapper"> 
+            <section id="description">
+                <div class="errorMsg" id="errorMsg" style="visibility: hidden;"></div>
+                <p>Masukkan suhu derajat Celsius (&#176;C) ke kotak dibawah ini, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&#176;F)</p>
             </section>
-
-        </section>
-
-        <section class="result-container">
-
-        <!-- Section Fahrenheit -->
-        <section>
-            <header>
-                <h3 data-temp-result="fahrenheit">Fahrenheit (&deg;F)</h3>
-            
-            </header>
-
-            <section>
-                <textarea class="textarea" input type="text" name="tempResult" id="tempResult" disabled></textarea>
-                
+            <section id="konversi">
+                <div>
+                    <h4 data-temp-input="celsius" >Celsius (&#176;C)</h4>
+                    <input type="text" name="tempInput" id="tempInput" placeholder="masukkan temperatur">
+                </div>
+                <div>
+                    <h4 data-temp-result="fahrenheit">Fahrenheit (&#176;F)</h4>
+                    <input type="text" name="tempResult" id="tempResult" disabled>
+                </div>
+                <div>
+                        <button onclick="onConvert()">Konversi</button>
+                        <button onclick="onReset()">Reset</button>
+                        <button onclick="onReverse()">Reverse</button>
+                </div>
+                <div>
+                    <h3>Cara Kalkulasi</h3>
+                    <textarea name="kalkulasi" id="kalkulasi" cols="30" rows="5" disabled></textarea>
+                </div>
             </section>
+            <section id="explanation">
+                <h3>Cara Konversi</h3>            
+                <div class="container-explain">
+                    <h5>Celsius ke Fahrenheit</h5>
+                    <div class="howto">
+                        <h2>Cara Konversi dari Celsius (&#176;C) ke Fahrenheit (&#176;F)</h2>
+                        <p>Suhu <span style="font-size: 1.5rem;">&#1029;</span> dalam derajat Fahrenheit sama dengan suhu <span style="font-size: 1.5rem;">&#1029;</span> dalam derajat Celsius dikali <span style="font-size: 1.5rem;">9/5</span>) ditambah <span style="font-size: 1.5rem;">32</span></p>
+                        <span style="font-size: 1.5rem;">&#1029;</span>(&#176;F) =  (<span style="font-size: 1.5rem;">&#1029;</span>(&#176;C) x <span style="font-size: 1.5rem;">9/5</span>) + <span style="font-size: 1.5rem;">32</span> </p>
+                        
+                        <p style="font-style: italic;">atau</p>
+                        <p>
+                            <span style="font-size: 1.5rem;">&#1029;</span>(&#176;F) =  (<span style="font-size: 1.5rem;">&#1029;</span>(&#176;C) x <span style="font-size: 1.5rem;">1.8</span>) + <span style="font-size: 1.5rem;">32</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="container-explain">
+                    <h5>Fahrenheit ke Celsius</h5>
+                    <div class="howto">
+                        <h2>Cara Konversi dari Fahrenheit (&#176;F) ke Celsius (&#176;C)  </h2>
+                        <p>Suhu <span style="font-size: 1.5rem;">&#1029;</span> dalam derajat Celsius sama dengan suhu <span style="font-size: 1.5rem;">&#1029;</span> dalam derajat Fahrenheit dikurangi <span style="font-size: 1.5rem;">32</span> dikali <span style="font-size: 1.5rem;">5/9</span></p>
 
-        </section>
-
-        <!-- Section Calculate -->
-        <section>
-            <header>
-                <h3>Convertion Calculate</h3>
-            </header>
-
-            <section>
-                <textarea class="textarea" name="kalkulasi" id="kalkulasi" cols="30" rows="5" disabled></textarea>
-            </section>
-
-        </section>
-
-        </section>
-
-        <hr/>
-
-        <!-- Section Formula/Info -->
-         <section>
-            <header>
-                <h1>Cara Konversi Dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h1>
-            </header>
-
-            <hr/>
-
-            <p>Suhu <span class="subject-info">S</span> dalam derajat Fahrenheit (&deg;F) sama dengan 
-                suhu  <span class="subject-info">S</span> dalam derajat Celcius (&deg;C) ...</p>
-            
-            <p><span class="subject-info">S</span><sub>(&deg;F)</sub> = 
-                (<span class="subject-info">S</span><sub>(&deg;C)</sub> x 9/5) + 32 </p>
-
-            <p>atau</p>
-
-            <p><span class="subject-info">S</span><sub>(&deg;F)</sub> = 
-                (<span class="subject-info">S</span><sub>(&deg;C)</sub> x 1,8) + 32 </p>
-
-         </section>
-
+                        <p><span style="font-size: 1.5rem;">&#1029;</span>(&#176;C) =  (<span style="font-size: 1.5rem;">&#1029;</span>(&#176;F) - <span style="font-size: 1.5rem;">32</span>) * <span style="font-size: 1.5rem;">5/9</span></p>
+     
+                    </div>
+                </div>
+            </section>  
+        </div>
     </main>
-    
-    <!-- Ini link Javascript -->
+    <footer>
+        <div class="wrapper footer-container">made by Fitriningtyas</div>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
-
 </html>

@@ -57,10 +57,10 @@ function onReverse() {
     displayError('', 'hidden')
 
     if (tempNameInput == 'celsius') {
-        displayTemperature('fahrenheit', 'Fahrenheit (\u00B0F)', 'celsius', 'Celsius (\u00B0C)')
+        displayTemperature('fahrenheit', 'Fahrenheit (&deg;F)', 'celsius', 'Celsius (&deg;C)')
 
     } else {
-        displayTemperature('celsius', 'Celsius (\u00B0C)', 'fahrenheit', 'Fahrenheit (\u00B0F)')
+        displayTemperature('celsius', 'Celsius (&deg;C)', 'fahrenheit', 'Fahrenheit (&deg;F)')
     }
 }
 
@@ -70,7 +70,7 @@ function onReset() {
     document.getElementById('kalkulasi').value = ''
     displayError('', 'hidden')
 
-    displayTemperature('celsius', 'Celsius (\u00B0C)', 'fahrenheit', 'Fahrenheit (\u00B0F)' )
+    displayTemperature('celsius', 'Celsius (&deg;C)', 'fahrenheit', 'Fahrenheit (&deg;F)' )
 }
 
 
