@@ -9,10 +9,13 @@
 </head>
 
 <body>
+    <img src="assets/eiffel.jpg" style="
+            width: 100%;
+            height: 60vh">
     <header>
         <div class="header-grid">
             <div class="wrapper">
-                <h1>Konversi Satuan Suhu</h1>
+                <h1 style="text-align:center;">Konversi Satuan Suhu</h1>
             </div>
         </div>
     </header>
@@ -20,7 +23,7 @@
         <div class="main-container wrapper"> 
             <section id="description">
                 <div class="errorMsg" id="errorMsg" style="visibility: hidden;"></div>
-                <p>Masukkan suhu derajat Celsius (&#176;C) ke kotak dibawah ini, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&#176;F)</p>
+                <p style="text-align: center;">Masukkan suhu derajat Celsius (&#176;C) ke kotak dibawah ini, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&#176;F)</p>
             </section>
             <section id="konversi" style="text-align:center;">
                 <div>
@@ -61,18 +64,18 @@
                             border: 0px;
                             border-radius: 4px;
                             font-weight: bold;
-                            background-color: black;
+                            background-color: darkred;
                             color: white">Reset</button>
                         <button onclick="onReverse()" style="
                             height: 35px;
                             border: 0px;
                             border-radius: 4px;
                             font-weight: bold;
-                            background-color: darkgrey;
+                            background-color: black;
                             color: white">Reverse</button>
                 </div>
                 <div>
-                    <h3>Cara Kalkulasi</h3>
+                    <h4>Cara Kalkulasi</h4>
                     <textarea name="kalkulasi" id="kalkulasi" cols="30" rows="5" disabled style="
                     border: 2px solid;
                     border-radius: 6px;
@@ -83,13 +86,13 @@
                     font-size: 15px;"></textarea>
                 </div>
             </section>
-            <hr/>
+            <br/>
             <section id="explanation">
-                <h3>Cara Konversi</h3>            
+                <h1>Cara Konversi</h1>            
                 <div class="container-explain">
-                    <h5>Celsius ke Fahrenheit</h5>
+                    <hr/>
                     <div class="howto">
-                        <h2>Cara Konversi dari Celsius (&#176;C) ke Fahrenheit (&#176;F)</h2>
+                        <h3>Cara Konversi dari Celsius (&#176;C) ke Fahrenheit (&#176;F)</h3>
                         <p>Suhu <span style="font-size: 1.5rem;">&#1029;</span> dalam derajat Fahrenheit sama dengan suhu <span style="font-size: 1.5rem;">&#1029;</span> dalam derajat Celsius dikali <span style="font-size: 1.5rem;">9/5</span>) ditambah <span style="font-size: 1.5rem;">32</span></p>
                         <span style="font-size: 1.5rem;">&#1029;</span>(&#176;F) =  (<span style="font-size: 1.5rem;">&#1029;</span>(&#176;C) x <span style="font-size: 1.5rem;">9/5</span>) + <span style="font-size: 1.5rem;">32</span> </p>
                         
@@ -100,9 +103,9 @@
                     </div>
                 </div>
                 <div class="container-explain">
-                    <h5>Fahrenheit ke Celsius</h5>
+                    <hr/>
                     <div class="howto">
-                        <h2>Cara Konversi dari Fahrenheit (&#176;F) ke Celsius (&#176;C)  </h2>
+                        <h3>Cara Konversi dari Fahrenheit (&#176;F) ke Celsius (&#176;C)  </h3>
                         <p>Suhu <span style="font-size: 1.5rem;">&#1029;</span> dalam derajat Celsius sama dengan suhu <span style="font-size: 1.5rem;">&#1029;</span> dalam derajat Fahrenheit dikurangi <span style="font-size: 1.5rem;">32</span> dikali <span style="font-size: 1.5rem;">5/9</span></p>
 
                         <p><span style="font-size: 1.5rem;">&#1029;</span>(&#176;C) =  (<span style="font-size: 1.5rem;">&#1029;</span>(&#176;F) - <span style="font-size: 1.5rem;">32</span>) * <span style="font-size: 1.5rem;">5/9</span></p>
@@ -112,6 +115,7 @@
             </section>  
         </div>
     </main>
+    <hr/>
     <footer>
         <div class="wrapper footer-container">made by Anriyan</div>
     </footer>
