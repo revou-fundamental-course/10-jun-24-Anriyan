@@ -1,7 +1,23 @@
 // Ini  Javascript
 
 function Konversi() {
+    hitungKonversi();
+    tampilkanCalc();
+    tampilkanRumus();
+}
 
+function ReverseKonversi() {
+    const selectedOption = jenisKonversi.value;
+    let reversedOption;
+
+    switch(selectedOption) {
+        case 'celcius-to-fahrenheit':
+            reversedOption = 'fahrenheit-to-celcius';
+            break;
+        case 'fahrenheit-to-celcius':
+            reversedOption = 'celcius-to-fahrenheit';
+            break;
+    }
 }
 
 function Reset() {
@@ -11,17 +27,3 @@ function Reset() {
 function Reverse() {
 
 }
-
-let celciusinput = document.querySelector('celcius><input')
-let fahrenheitinput = document.querySeletor('fahrenheit><input')
-
-let btn = document.querySelector('.button button')
-
-function roundNumber(number) {
-    return Math.round(number*100)/100
-}
-
-celciusinput.addEventListener('click', function(){
-    let cTemp = parseFloat(celciusInput.value)
-    let fTemp = parseFloat()
-})
