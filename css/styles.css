@@ -1,9 +1,5 @@
 /* Ini CSS */
 
-.container-alignt {
-    text-align: center;
-}
-
 :root {
     --fn-title: 'Lora', serif;
     --fn: 'Merriweather Sans', sans-serif;
