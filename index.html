@@ -21,12 +21,12 @@
         <!-- Section Celcius -->
         <section class="celcius-container" id="konversi">
             <header>
-                <h3>Celcius (&deg;C)</h3>
+                <h3 data-temp-input="celcius">Celcius (&deg;C)</h3>
+                <input type="text" name="tempInput" id="tempInput" placeholder="masukkan temperatur">
             </header>
 
             <section>
-                <textarea class="textarea" data-temp-input="celcius"></textarea>
-                <input type="text" name="tempInput" id="tempInput" placeholder="masukkan temperatur">
+                <textarea class="textarea"></textarea>
 
                 <section>
                     <button class="button darkgreen-color" onclick="onConvert()">Konversi</button>
@@ -42,12 +42,13 @@
         <!-- Section Fahrenheit -->
         <section>
             <header>
-                <h3>Fahrenheit (&deg;F)</h3>
+                <h3 data-temp-result="fahrenheit">Fahrenheit (&deg;F)</h3>
+                <input type="text" name="tempResult" id="tempResult" disabled>
             </header>
 
             <section>
-                <textarea class="textarea" data-temp-result="fahrenheit"></textarea>
-                <input type="text" name="tempResult" id="tempResult" disabled>
+                <textarea class="textarea"></textarea>
+                
             </section>
 
         </section>
