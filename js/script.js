@@ -21,14 +21,14 @@ function onConvert() {
         if (tempNameInput === 'celsius') {
                 let tempResult = (tempInputValue * 9/5) + 32
                 document.getElementById('tempResult').value = tempResult
-                document.getElementById('kalkulasi').value = `(${tempInputValue} \u00B0C x 9/5) + 32 = ${tempResult} \u00B0F `
+                document.getElementById('kalkulasi').value = `(${tempInputValue} &deg;C x 9/5) + 32 = ${tempResult} &deg;F `
             }
     
         else if (tempNameInput === 'fahrenheit')  {
                 let tempResult = (tempInputValue - 32) * 5/9
                 document.getElementById('tempResult').value = tempResult
     
-                document.getElementById('kalkulasi').value = `(${tempInputValue} \u00B0F - 32) x 5/9 = ${tempResult} \u00B0C `
+                document.getElementById('kalkulasi').value = `(${tempInputValue} &deg;F - 32) x 5/9 = ${tempResult} &deg;C `
         }
         displayError('', 'hidden')
     }
