@@ -19,18 +19,20 @@
         <h4>Masukkan suhu derajat celcius (&deg;C)</h4>
 
         <!-- Section Celcius -->
-        <section class="celcius-container">
+        <section class="celcius-container" id="konversi">
             <header>
                 <h3>Celcius (&deg;C)</h3>
             </header>
 
             <section>
-                <textarea class="textarea"></textarea>
+                <textarea class="textarea" data-temp-input="celcius">
+                    <input type="text" name="tempInput" id="tempInput" placeholder="masukkan temperatur">
+                </textarea>
 
                 <section>
-                    <button class="button darkgreen-color">Konversi</button>
-                    <button class="button darkred-color" onclick="Reset()">Reset</button>
-                    <button class="button darkgray-color" onclick="ReverseKonversi">Reverse</button>
+                    <button class="button darkgreen-color" onclick="onConvert()">Konversi</button>
+                    <button class="button darkred-color" onclick="onReset()">Reset</button>
+                    <button class="button darkgray-color" onclick="onReverse()">Reverse</button>
                 </section>
             </section>
 
@@ -45,7 +47,9 @@
             </header>
 
             <section>
-                <textarea class="textarea"></textarea>
+                <textarea class="textarea" data-temp-result="fahrenheit">
+                    <input type="text" name="tempResult" id="tempResult" disabled>
+                </textarea>
             </section>
 
         </section>
@@ -57,7 +61,7 @@
             </header>
 
             <section>
-                <textarea class="textarea"></textarea>
+                <textarea class="textarea" name="kalkulasi" id="kalkulasi" cols="30" rows="5" disabled></textarea>
             </section>
 
         </section>
