@@ -21,10 +21,25 @@
 }
 
 .button {
-    height: 34px;
+    height: 35px;
     border: 0px;
     border-radius: 4px;
     font-weight: bold;
+}
+
+.darkgreen-color {
+    background-color: darkgreen;
+    color: white;
+}
+
+.darkred-color {
+    background-color: darkred;
+    color: white;
+}
+
+.darkgray-color {
+    background-color: darkgray;
+    color: white;
 }
 
 .subject-info {
