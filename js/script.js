@@ -21,14 +21,14 @@ function onConvert() {
         if (tempNameInput === 'celsius') {
                 let tempResult = (tempInputValue * 9/5) + 32
                 document.getElementById('tempResult').value = tempResult
-                document.getElementById('kalkulasi').value = `(${tempInputValue} &deg;C x 9/5) + 32 = ${tempResult} &deg;F `
+                document.getElementById('kalkulasi').value = `(${tempInputValue} \u00B0C x 9/5) + 32 = ${tempResult} \u00B0F `
             }
     
         else if (tempNameInput === 'fahrenheit')  {
                 let tempResult = (tempInputValue - 32) * 5/9
                 document.getElementById('tempResult').value = tempResult
     
-                document.getElementById('kalkulasi').value = `(${tempInputValue} &deg;F - 32) x 5/9 = ${tempResult} &deg;C `
+                document.getElementById('kalkulasi').value = `(${tempInputValue} \u00B0F - 32) x 5/9 = ${tempResult} \u00B0C `
         }
         displayError('', 'hidden')
     }
@@ -57,10 +57,10 @@ function onReverse() {
     displayError('', 'hidden')
 
     if (tempNameInput == 'celsius') {
-        displayTemperature('fahrenheit', 'Fahrenheit (&deg;F)', 'celsius', 'Celsius (&deg;C)')
+        displayTemperature('fahrenheit', 'Fahrenheit (\u00B0F)', 'celsius', 'Celsius (\u00B0C)')
 
     } else {
-        displayTemperature('celsius', 'Celsius (&deg;C)', 'fahrenheit', 'Fahrenheit (&deg;F)')
+        displayTemperature('celsius', 'Celsius (\u00B0C)', 'fahrenheit', 'Fahrenheit (\u00B0F)')
     }
 }
 
@@ -70,7 +70,7 @@ function onReset() {
     document.getElementById('kalkulasi').value = ''
     displayError('', 'hidden')
 
-    displayTemperature('celsius', 'Celsius (&deg;C)', 'fahrenheit', 'Fahrenheit (&deg;F)' )
+    displayTemperature('celsius', 'Celsius (\u00B0C)', 'fahrenheit', 'Fahrenheit (\u00B0F)' )
 }
 
 
