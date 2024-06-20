@@ -1,5 +1,14 @@
 /* Ini CSS */
 
+.celcius-container {
+    text-align: center;
+}
+
+.result-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .subject-info {
     font-size: 24px;
     font-style: italic;
